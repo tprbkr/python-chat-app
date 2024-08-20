@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+        var socket = io();
+        var username = "{{ username }}";
+
+        socket.on('message', function(msg) {
+            var item = document.createElement('div');
+            item.textContent = msg;
+            document.getElementById('messages').appendChild(item);
+        });
+
+        function sendMessage() {
+            var msg = document.getElementById('message').value;
+            socket.send(username + ': ' + msg);
+            document.getElementById('message').value = '';
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome, {{ username }}!</h1>
+    <div id="messages"></div>
+    <input id="message" type="text" placeholder="Type your message here...">
+    <button onclick="sendMessage()">Send</button>
+</body>
+</html>
