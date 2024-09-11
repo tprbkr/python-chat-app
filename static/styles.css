@@ -1,0 +1,77 @@
+/* Basic Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-color: #222827; /* Light grey background */
+    color: #3eba0d; /* Dark grey text color */
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Centering Heading */
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.5em; /* Adjust as needed */
+}
+
+/* Centering Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center;
+}
+
+/* Styling Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    color: #f4f7f2;
+    background-color: #4f5150;
+}
+
+
+/* Styling Chat Container */
+#messages {
+    width: 100%;
+    max-width: 800px; /* Adjust as needed */
+    height: 60vh; /* Adjust as needed */
+    margin: 20px auto; /* Center and add margin */
+    overflow-y: scroll; /* Allow scrolling for chat messages */
+    background-color: #767875; /* Dark background for chat area */
+    color: #f7f1f5; /* White text color for chat messages */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(10, 129, 64, 0.2); /* Optional shadow */
+    text-align: left; /* Align text to the left */
+}
+
+/* Styling Message Input */
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: calc(100% - 90px); /* Adjust width to fit the button */
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 10px;
+    color: #0b0b0b;
+    background-color: #68b73a;
+}

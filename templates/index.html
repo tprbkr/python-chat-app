@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <meta charset="UTF-8">
-    <title>Welcome to the Chat</title>
+    <title>Welcome to PT Chat App</title>
 </head>
 <body>
-    <h1>Welcome to the Chat App</h1>
-    <form method="post" action="/">
-        <label for="username">Enter your name:</label>
-        <input type="text" id="username" name="username" required>
-        <button type="submit">Join Chat</button>
-    </form>
+    <div class="container">
+        <h1>Welcome to PT Chat App</h1>
+        <form method="post" action="/">
+            <label for="username">Enter your name:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Join Chat</button>
+        </form>
+    </div>
 </body>
 </html>
